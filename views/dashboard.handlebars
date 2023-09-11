@@ -1,0 +1,19 @@
+{{#if posts.length}}
+<section>
+    <div class="row">
+        <h2>Hi, {{username}} </h2>
+    </div>
+    <br>
+    {{#each posts as |post|}}
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
+        <div class="card-header">
+            <h3><a class="link" href="/dashboard/edit/{{id}} ">{{title}}</a></h3>
+            <button class="btn" id="del-post-btn">Delete Post</button>
+        </div>
+    {{/each}}
+</section>
+{{/if}}
+
+<button type="submit" class="btn"><a href="/dashboard/new"><i class="bi bi-plus-suqare"></i>Add New Post</a></button>
+
+<script src="js/deletepost.js"></script>
